@@ -62,7 +62,12 @@ fibSequence(2,3);
 
 var months = {"January":1, "February": 2, "March": 3, "April": 4, "May":5, "June":6, "July": 7, "August":8 , "September": 9, "October": 10, "November": 11, "December": 12};
 
-function checkCoupon(month, day, year) {
+function checkCoupon(string) {
+  arry =[]
+  array =string.split(",")
+  month = array[0]
+  day = array[1]
+  year = array[2]
   var month_input = months[month];
   if(month_input+day+year <= months.June+14+2014) {
     alert("Your coupon has been accepted");
@@ -72,4 +77,4 @@ function checkCoupon(month, day, year) {
     console.log("false");
   };
 };
-checkCoupon("October", 14, 2014);
+checkCoupon("October, 14, 2014");
